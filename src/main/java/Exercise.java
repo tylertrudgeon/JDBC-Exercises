@@ -33,6 +33,11 @@ public class Exercise {
             statement.execute(query);
             System.out.println("Deleted id number " + idToDelete);
 
+            Short release_date = 2020;
+            long idToUpdate = 2;
+
+            statement.execute("UPDATE albums SET release_date =" + release_date + " WHERE id = " + idToUpdate);
+            System.out.println("Updated " + idToUpdate);
 
         } catch (SQLException e) {
             e.printStackTrace();
